@@ -381,7 +381,7 @@ ol {
 
 .feature-card-image {
   width: 100%;
-  height: 260px;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -394,6 +394,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 20px;
 }
 
 .feature-card-content {
