@@ -368,8 +368,10 @@ ol {
 }
 
 .feature-card {
-  background: transparent;
-  overflow: hidden;
+  background: none !important;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   transition: var(--transition);
 }
 
@@ -380,11 +382,11 @@ ol {
 .feature-card-image {
   width: 100%;
   height: 260px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: none !important;
+  border-radius: 0;
   padding: 0;
 }
 
