@@ -94,3 +94,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ===== VIDEO DEMO MODAL =====
+const demoBtn = document.getElementById('demoBtn');
+const videoModal = document.getElementById('videoModal');
+const videoModalClose = document.getElementById('videoModalClose');
+const vimeoPlayer = document.getElementById('vimeoPlayer');
+const vimeoSrc = 'https://player.vimeo.com/video/1168076498?badge=0&autopause=0&player_id=0&app_id=58479';
+
+function openVideoModal() {
+  vimeoPlayer.src = vimeoSrc;
+  videoModal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal() {
+  videoModal.classList.remove('active');
+  vimeoPlayer.src = '';
+  document.body.style.overflow = '';
+}
+
+if (demoBtn) {
+  demoBtn.addEventListener('click', openVideoModal);
+}
+
+if (videoModalClose) {
+  videoModalClose.addEventListener('click', closeVideoModal);
+}
+
+if (videoModal) {
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) closeVideoModal();
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && videoModal && videoModal.classList.contains('active')) {
+    closeVideoModal();
+  }
+});

@@ -63,10 +63,22 @@
           </svg>
           Запустить в Telegram
         </a>
-        <button class="btn-secondary">Смотреть демо (в разработке)</button>
+        <button class="btn-secondary" id="demoBtn">Смотреть демо</button>
       </div>
     </div>
   </section>
+
+  <!-- ===== VIDEO MODAL ===== -->
+  <div class="video-modal-overlay" id="videoModal">
+    <div class="video-modal">
+      <button class="video-modal-close" id="videoModalClose" aria-label="Закрыть">&times;</button>
+      <div class="video-modal-wrapper">
+        <iframe id="vimeoPlayer" src="" width="2304" height="1440" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" title="Final-Demo"></iframe>
+      </div>
+    </div>
+  </div>
 
 
   <!-- ===== ICON BADGES ===== -->
